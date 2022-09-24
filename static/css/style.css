@@ -356,13 +356,14 @@ nav.navigation a.button {
 	text-align: right;
 	position: relative;
 	top: 1px;
-	color: var(--text-third);
+	color: var(--text-secondary);
 }
 
 #list-page .summary {
-	color: #757575;
+	color: var(--text-secondary);
 	margin-top: 12px;
 	word-break: normal;
+    font-size: small;
 	overflow-wrap: anywhere;
 	margin-bottom: 36px;
 }
@@ -470,7 +471,7 @@ nav.navigation a.button {
 }
 #archive .group .value .date {
 	display: inline-block;
-	color: var(--text-third);
+	color: var(--text-secondary);
 	min-width: 60px;
 }
 #archive .group .value .title {
@@ -603,7 +604,6 @@ html,
 }
 .item div {
 	display: flex;
-	justify-content: center;
 }
 .item time {
 	font-size: small;
@@ -669,7 +669,7 @@ html,
 }
 
 #list-page .blog-draft a {
-	color: var(--text-secondary);
+	color: var(--text-third);
 }
 
 #list-page .blog-draft a::before {

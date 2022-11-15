@@ -24,20 +24,20 @@ code {
 }
 
 .social-container {
-    display: flex;
+	display: flex;
 }
 
 .symbol {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .symbol svg {
-    max-width: 30px;
-    max-height: 30px;
-    width: 100%;
-    fill: var(--primary)
+	max-width: 30px;
+	max-height: 30px;
+	width: 100%;
+	fill: var(--primary);
 }
 
 body {
@@ -269,7 +269,7 @@ nav.navigation a.button {
 	font-size: 13px;
 }
 #footer .split {
-    color: var(--primary);
+	color: var(--primary);
 	cursor: pointer;
 }
 #footer .split:hover {
@@ -292,10 +292,11 @@ nav.navigation a.button {
 
 .profile {
 	text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: var(--spacing);
 }
 
 .profile .avatar {
@@ -363,7 +364,7 @@ nav.navigation a.button {
 	color: var(--text-secondary);
 	margin-top: 12px;
 	word-break: normal;
-    font-size: small;
+	font-size: small;
 	overflow-wrap: anywhere;
 	margin-bottom: 36px;
 }
@@ -473,6 +474,7 @@ nav.navigation a.button {
 	display: inline-block;
 	color: var(--text-secondary);
 	min-width: 60px;
+	margin-right: calc(var(--spacing) / 2);
 }
 #archive .group .value .title {
 	display: inline;
@@ -637,11 +639,11 @@ html,
 	content: attr(data-tooltip);
 	color: var(--text);
 	display: none;
-    background-color: var(--background-third);
-    padding: calc(var(--spacing) / 2);
-    border-radius: var(--spacing);
+	background-color: var(--background-third);
+	padding: calc(var(--spacing) / 2);
+	border-radius: var(--spacing);
 }
-[data-tooltip]:hover::before{
+[data-tooltip]:hover::before {
 	display: inline;
 }
 .level-box {
@@ -678,10 +680,10 @@ html,
 }
 
 .badge-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .badge-container a {
-    margin: calc(var(--spacing) / 2);
+	margin: calc(var(--spacing) / 2);
 }

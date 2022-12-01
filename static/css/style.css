@@ -14,6 +14,11 @@
 	--beginner-darker: #a56175;
 }
 
+@font-face {
+	font-family: "Space Mono";
+	src: url("../fonts/spacemono.ttf");
+}
+
 /* this should fix the ios mobile code blog font size bug
  * recorded here: https://github.com/adityatelange/hugo-PaperMod/issues/828 */
 code {
@@ -162,7 +167,7 @@ h4:hover a {
 }
 p code,
 li code {
-	font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+	font-family: "Space Mono", monospace;
 	background-color: var(--background-forth);
 	font-size: inherit;
 	padding: 2px 5px;
@@ -174,7 +179,7 @@ li code {
 	text-indent: 0;
 }
 pre code {
-	font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+	font-family: "Space Mono", monospace;
 }
 pre {
 	border-radius: 0.5rem;
@@ -336,7 +341,7 @@ nav.navigation a.button {
 #list-page .title {
 	display: inline-block;
 	color: var(--text);
-	font-size: 18px;
+	font-size: 16px !important;
 	font-weight: 400;
 	margin: 0;
 	width: 80%;
@@ -586,10 +591,10 @@ body,
 html,
 .tags,
 .tip {
-	font-family: monospace;
+	font-family: "Space Mono", monospace;
 }
 .item .title {
-	font-family: monospace;
+	font-family: "Space Mono", monospace;
 	font-size: 1.1rem !important;
 }
 .profile h1,

@@ -15,8 +15,19 @@
 }
 
 @font-face {
-	font-family: "Space Mono";
-	src: url("../fonts/spacemono.ttf");
+	font-family: "JetBrains Mono";
+	font-style: normal;
+	font-weight: 100 200 300 400 500 600 700 800;
+	font-display: block;
+	src: url("../fonts/jetbrainsmono.ttf") format("ttf");
+}
+
+@font-face {
+	font-family: "JetBrains Mono";
+	font-style: italic;
+	font-weight: 100 200 300 400 500 600 700 800;
+	font-display: block;
+	src: url("../fonts/jetbrainsmono_italic.ttf") format("ttf");
 }
 
 /* this should fix the ios mobile code blog font size bug
@@ -167,7 +178,7 @@ h4:hover a {
 }
 p code,
 li code {
-	font-family: "Space Mono", monospace;
+	font-family: "JetBrains Mono", monospace;
 	background-color: var(--background-forth);
 	font-size: inherit;
 	padding: 2px 5px;
@@ -179,7 +190,7 @@ li code {
 	text-indent: 0;
 }
 pre code {
-	font-family: "Space Mono", monospace;
+	font-family: "JetBrains Mono", monospace;
 }
 pre {
 	border-radius: 0.5rem;
@@ -321,12 +332,11 @@ nav.navigation a.button {
 }
 
 .profile h2 {
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 300;
 	color: var(--text-secondary);
 	margin-top: 0;
 }
-
 /* index post list */
 #list-page {
 	max-width: 580px;
@@ -591,15 +601,13 @@ body,
 html,
 .tags,
 .tip {
-	font-family: "Space Mono", monospace;
+	font-family: "JetBrains Mono", monospace;
 }
 .item .title {
-	font-family: "Space Mono", monospace;
+	font-family: "JetBrains Mono", monospace;
 	font-size: 1.1rem !important;
 }
-.profile h1,
 #listpage .title,
-#section,
 #single {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }

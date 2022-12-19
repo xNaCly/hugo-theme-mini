@@ -1,0 +1,22 @@
+<div class="skill-container">
+    <div class="skill-cont-child">
+        <div class="skill-sub">
+            <p>LANGUAGES</p>
+            {{range .Site.Data.skills.langs }} 
+                {{partial "skill.html" .}} 
+            {{end}}
+        </div>
+        <div class="skill-sub">
+            <p>FRAMEWORKS</p>
+            {{range .Site.Data.skills.frameworks }} 
+                {{partial "skill.html" .}} 
+            {{end}}
+        </div>
+        <div class="skill-sub">
+            <p>TOOLS</p>
+            {{range .Site.Data.skills.tools }} 
+                {{partial "skill.html" .}} 
+            {{end}}
+        </div>
+    </div>
+</div>

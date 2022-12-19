@@ -1,0 +1,18 @@
+<div class="project-container">
+    {{range .Site.Data.projects.projects}}
+        <div class="project">
+            <div class="project-title-container">
+                <p class="project-title">{{.title}}</p>
+                <a class="project-github" href="{{.url}}" rel="me" target="_blank">
+                    {{ partial "svgs/github-small.svg"}}
+                </a>
+            </div>
+            <span class="project-desc">{{.description}}</span>
+            <div class="project-tech-container">
+                {{range .tech}}
+                    <span class="project-tech">{{.}}</span>
+                {{end}}
+            </div>
+        </div>
+    {{end}}
+</div>

@@ -14,20 +14,84 @@
 	--beginner-darker: #a56175;
 }
 
+/* inter-regular - latin */
 @font-face {
-	font-family: "JetBrains Mono";
-	font-style: normal;
-	font-weight: 100 200 300 400 500 600 700 800;
-	font-display: block;
-	src: url("../fonts/jetbrainsmono.ttf") format("ttf");
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/inter-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/inter-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+/* inter-500 - latin */
 @font-face {
-	font-family: "JetBrains Mono";
-	font-style: italic;
-	font-weight: 100 200 300 400 500 600 700 800;
-	font-display: block;
-	src: url("../fonts/jetbrainsmono_italic.ttf") format("ttf");
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/inter-v12-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/inter-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* inter-600 - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+       url('../fonts/inter-v12-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/inter-v12-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* inter-700 - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* inter-800 - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  src: local(''),
+       url('../fonts/inter-v12-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/inter-v12-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* inter-900 - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  src: local(''),
+       url('../fonts/inter-v12-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/inter-v12-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* jetbrains-mono-regular - latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('/fonts/jetbrains-mono-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/jetbrains-mono-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* jetbrains-mono-italic - latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+       url('/fonts/jetbrains-mono-v13-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('/fonts/jetbrains-mono-v13-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* this should fix the ios mobile code blog font size bug
@@ -58,7 +122,7 @@ code {
 
 body {
 	line-height: 1;
-	font: normal 15px/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Inter", sans-serif;
 	background-color: var(--background-sec);
 	color: var(--text);
 	line-height: 1.75;
@@ -518,6 +582,7 @@ nav.navigation a.button {
 
 /* taxonomy */
 #tags {
+    font-family: "JetBrains Mono", monospace;
 	max-width: 700px;
 	margin: 48px auto 0 auto;
 	padding: 0 12px;
@@ -554,6 +619,11 @@ nav.navigation a.button {
 	max-width: 580px;
 	margin: 0 auto 0 auto;
 	padding: 0 12px;
+}
+
+#section h3 {
+    color: var(--primary);
+    font-weight: 800;
 }
 
 /* 404 page */
@@ -597,15 +667,14 @@ nav.navigation a.button {
 }
 
 /* xnacly's overrides */
-body,
-html,
 .tags,
+.navigation,
+.date,
 .tip {
 	font-family: "JetBrains Mono", monospace;
 }
 .item .title {
 	font-family: "JetBrains Mono", monospace;
-	font-size: 1.1rem !important;
 }
 #listpage .title,
 #single {
@@ -630,58 +699,26 @@ html,
 	justify-content: center;
 }
 
-.skill-container {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: var(--spacing);
+.skill-container .skill-cont-child {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
-.skill {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-.skill img {
-	max-width: 5rem;
-	margin: var(--spacing);
+.skill-container .skill-sub {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: calc(var(--spacing)*3);
 }
 
-[data-tooltip]::before {
-	position: absolute;
-	content: attr(data-tooltip);
-	color: var(--text);
-	display: none;
-	background-color: var(--background-third);
-	padding: calc(var(--spacing) / 2);
-	border-radius: var(--spacing);
+.skill-container .skill-sub > p {
+    margin-top: var(--spacing);
+    margin-bottom: var(--spacing);
+    font-weight: 800;
 }
-[data-tooltip]:hover::before {
-	display: inline;
-}
-.level-box {
-	text-transform: capitalize;
-	border-radius: var(--spacing);
-	padding: var(--spacing);
-	text-align: center;
-	color: var(--background-sec);
-}
-.level-advanced {
-	background-color: var(--advanced);
-	box-shadow: inset 0 -4px 0 var(--advanced-darker);
-}
-.level-beginner {
-	background-color: var(--beginner);
-	box-shadow: inset 0 -4px 0 var(--beginner-darker);
-}
-.level-intermediate {
-	background-color: var(--intermediate);
-	box-shadow: inset 0 -4px 0 var(--intermediate-darker);
-}
-.level-expert {
-	background-color: var(--expert);
-	box-shadow: inset 0 -4px 0 var(--expert-darker);
-}
+
 
 #list-page .blog-draft a {
 	color: var(--text-third);
@@ -699,4 +736,58 @@ html,
 }
 .badge-container a {
 	margin: calc(var(--spacing) / 2);
+}
+
+.project-container {
+    margin-top: calc(var(--spacing)*4);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: calc(var(--spacing)*2);
+}
+
+.project {
+    background-color: var(--background-third);
+    border-radius: var(--spacing);
+    padding: var(--spacing);
+    cursor: pointer;
+    transition: all linear 200ms;
+}
+
+.project-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-title {
+	font-size: calc(var(--spacing) * 3);
+    margin-top: var(--spacing);
+    margin-bottom: var(--spacing);
+    font-weight: 800;
+}
+
+.project-tech-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.project-tech {
+    margin-right: var(--spacing);
+    color: var(--text-secondary);
+    padding: calc(var(--spacing) / 4);
+}
+
+.project-github > svg {
+    stroke: var(--primary);
+    width: 2rem;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project-github > svg:hover {
+    stroke: var(--primary-hover);
+    width: 2rem;
 }

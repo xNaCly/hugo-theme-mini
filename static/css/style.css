@@ -243,7 +243,7 @@ h4:hover a {
 p code,
 li code {
 	font-family: "JetBrains Mono", monospace;
-	background-color: var(--background-forth);
+	background-color: var(--background-third);
 	font-size: inherit;
 	padding: 2px 5px;
 	border: 1px solid var(--text-third);
@@ -283,11 +283,6 @@ nav.navigation a:hover {
 	color: var(--primary-hover);
 }
 
-nav.navigation a.button {
-	background: var(--primary);
-	color: var(--text);
-	margin-left: 12px;
-}
 @media (max-width: 700px) {
 	nav.navigation {
 		padding: 20px 10px 0 0;
@@ -297,10 +292,14 @@ nav.navigation a.button {
 	}
 }
 
-@media (max-width: 324px) {
-	nav.navigation a.button {
-		display: none;
-	}
+@media (max-width: 600px) {
+    .skill-container {
+        flex-direction: column;
+    }
+    .project-container {
+        display: flex !important;
+        flex-direction: column;
+    }
 }
 
 /* toc */
@@ -699,7 +698,7 @@ nav.navigation a.button {
 	justify-content: center;
 }
 
-.skill-container .skill-cont-child {
+.skill-container {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;

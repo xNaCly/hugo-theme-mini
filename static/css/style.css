@@ -241,6 +241,7 @@ h4:hover a {
 	overflow-x: auto;
 }
 p code,
+td code,
 li code {
 	font-family: "JetBrains Mono", monospace;
 	background-color: var(--background-third);

@@ -1,5 +1,5 @@
-@import "light.css" screen;
-@import "dark.css" screen and (prefers-color-scheme: dark);
+@import "css/light.css" screen;
+@import "css/dark.css" screen and (prefers-color-scheme: dark);
 /* xnacly's custom vars */
 :root {
 	--spacing: 0.5rem;
@@ -146,6 +146,7 @@ blockquote {
 	padding-left: 1em;
 	padding-right: 1em;
 	margin-left: 0px;
+    margin-right: 0px;
 	border-top-right-radius: var(--spacing);
 	border-bottom-right-radius: var(--spacing);
 	border-left: 2px solid var(--primary);
@@ -553,7 +554,7 @@ nav.navigation a:hover {
 	display: inline-block;
 	color: var(--text-secondary);
 	min-width: 60px;
-	margin-right: calc(var(--spacing) / 2);
+	margin-right: calc(var(--spacing) * 2);
 }
 #archive .group .value .title {
 	display: inline;

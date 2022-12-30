@@ -2,11 +2,7 @@
 	{{ if not .IsHome }}
 		<a href="{{ "/" | relURL }}"> <span class="arrow"></span>~</a>
 	{{ end }}
-	<a href="{{ "/posts" | relURL }}">~/archive</a>
-	<a href="{{ "/tags" | relURL }}">~/tags</a>
-	<a href="{{ "/about" | relURL }}">~/about</a>
-
-	{{ range $element := .Site.Params.Links }}
-		<a href="{{ $element.path }}">{{ $element.name }}</a>
-	{{ end }}
+	<a href="{{ "/posts/" | relURL }}">~/archive</a>
+	<a href="{{ "/tags/" | relURL }}">~/tags</a>
+	<a href="{{ "/about/" | relURL }}">~/about</a>
 </nav>

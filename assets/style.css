@@ -835,6 +835,5 @@ nav.navigation a:hover {
   color: var(--tip);
 }
 #callout.Tip h3::before {
-allout.Tip h3::before {
   content: "🕵🏼";
 }

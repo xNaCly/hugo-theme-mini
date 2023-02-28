@@ -2,32 +2,44 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width,minimum-scale=1" />
 {{ if .IsPage }}
-  <title>{{ .Title }} | {{ $.Site.Title }}</title>
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="{{ .Title }}" />
-  <meta property="og:description" content="{{ .Summary }}" />
-  <meta name="description" content="{{ .Summary }}" />
-  <meta property="article:author" content="xnacly" />
-  <meta property="article:published_time" content="{{ .Date }}" />
+<title>{{ .Title }} | {{ $.Site.Title }}</title>
+<meta
+  name="google-site-verification"
+  content="7mS7eshailYRolruQYUXdaY4y3k-TLN77YblCrR8yUA"
+/>
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description" content="{{ .Summary }}" />
+<meta name="description" content="{{ .Summary }}" />
+<meta property="article:author" content="xnacly" />
+<meta property="article:published_time" content="{{ .Date }}" />
 {{ else }}
-  <title>{{ $.Site.Title }}</title>
-  <meta property="og:title" content="{{ $.Site.Title }}" />
-  <meta property="og:description" content="{{ .Site.Params.Description }}" />
-  <meta name="description" content="{{ .Site.Params.Description }}" />
-{{ end }}
-
-{{ hugo.Generator }} {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
-{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
+<title>{{ $.Site.Title }}</title>
+<meta property="og:title" content="{{ $.Site.Title }}" />
+<meta property="og:description" content="{{ .Site.Params.Description }}" />
+<meta name="description" content="{{ .Site.Params.Description }}" />
+{{ end }} {{ hugo.Generator }} {{/* NOTE: For Production make sure you add
+`HUGO_ENV="production"` before your build command */}} {{ if eq (getenv
+"HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
 <meta name="ROBOTS" content="INDEX, FOLLOW" />
 {{ else }}
 <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
-{{ end }} 
-
-{{ $style := resources.Get "style.css" | minify | fingerprint }}
+{{ end }} {{ $style := resources.Get "style.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
-<link rel="shortcut icon" href="{{ "/images/favicon.ico" | relURL }}" type="image/x-icon" /> {{ if or .Params.math
-.Site.Params.math }} {{ partial "math.html" . }} {{ end }} {{ if .OutputFormats.Get "RSS" }} {{ with .OutputFormats.Get
-"RSS" }}
-<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
-<link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+<link rel="shortcut icon" href="{{ "/images/favicon.ico" | relURL }}"
+type="image/x-icon" /> {{ if or .Params.math .Site.Params.math }} {{ partial
+"math.html" . }} {{ end }} {{ if .OutputFormats.Get "RSS" }} {{ with
+.OutputFormats.Get "RSS" }}
+<link
+  href="{{ .RelPermalink }}"
+  rel="alternate"
+  type="application/rss+xml"
+  title="{{ $.Site.Title }}"
+/>
+<link
+  href="{{ .RelPermalink }}"
+  rel="feed"
+  type="application/rss+xml"
+  title="{{ $.Site.Title }}"
+/>
 {{ end }} {{ end }}

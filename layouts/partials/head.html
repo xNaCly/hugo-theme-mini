@@ -22,9 +22,8 @@
 `HUGO_ENV="production"` before your build command */}} {{ if eq (getenv
 "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
 <meta name="ROBOTS" content="INDEX, FOLLOW" />
-{{ else }}
-<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
-{{ end }} {{ $style := resources.Get "style.css" | minify | fingerprint }}
+{{ else }} {{ end }} {{ $style := resources.Get "style.css" | minify |
+fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
 <link rel="shortcut icon" href="{{ "/images/favicon.ico" | relURL }}"
 type="image/x-icon" /> {{ if or .Params.math .Site.Params.math }} {{ partial

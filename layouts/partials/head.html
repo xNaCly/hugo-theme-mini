@@ -20,10 +20,8 @@
 <meta name="description" content="{{ .Site.Params.Description }}" />
 {{ end }} {{ hugo.Generator }} {{/* NOTE: For Production make sure you add
 `HUGO_ENV="production"` before your build command */}} {{ if eq (getenv
-"HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
-<meta name="ROBOTS" content="INDEX, FOLLOW" />
-{{ else }} {{ end }} {{ $style := resources.Get "style.css" | minify |
-fingerprint }}
+"HUGO_ENV") "production" | or (eq .Site.Params.env "production") }} {{ else }}
+{{ end }} {{ $style := resources.Get "style.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
 <link rel="shortcut icon" href="{{ "/images/favicon.ico" | relURL }}"
 type="image/x-icon" /> {{ if or .Params.math .Site.Params.math }} {{ partial

@@ -166,6 +166,8 @@ hr {
 
 table {
   width: 100%;
+  overflow: auto;
+  display: block;
   margin: 40px 0;
   border-collapse: collapse;
   line-height: 1.5em;

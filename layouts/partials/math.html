@@ -1,21 +1,10 @@
-<!-- https://katex.org/docs/browser.html -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
-  integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0"
-  crossorigin="anonymous"
-/>
+{{ $kate_min_css := resources.Get "katex.min.css" | fingerprint }} {{
+$kate_min_js := resources.Get "katex.min.js" | fingerprint }} {{ $auto_render :=
+resources.Get "auto-render.min.js" | fingerprint }}
+<link rel="stylesheet" href="{{ $kate_min_css.Permalink }}" />
+<script defer src="{{ $kate_min_js.Permalink }}"></script>
 <script
   defer
-  src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
-  integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4"
-  crossorigin="anonymous"
-></script>
-<script
-  defer
-  src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
-  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
-  crossorigin="anonymous"
+  src="{{ $auto_render.Permalink }}"
   onload="renderMathInElement(document.body);"
 ></script>
-

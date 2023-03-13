@@ -18,15 +18,13 @@
 <meta property="og:title" content="{{ $.Site.Title }}" />
 <meta property="og:description" content="{{ .Site.Params.Description }}" />
 <meta name="description" content="{{ .Site.Params.Description }}" />
-{{ end }} {{ hugo.Generator }} {{/* NOTE: For Production make sure you add
-`HUGO_ENV="production"` before your build command */}} {{ if eq (getenv
-"HUGO_ENV") "production" | or (eq .Site.Params.env "production") }} {{ else }}
-{{ end }} {{ $style := resources.Get "style.css" | minify | fingerprint }}
+{{ end }} {{ hugo.Generator }} {{ if eq (getenv "HUGO_ENV") "production" | or
+(eq .Site.Params.env "production") }} {{ else }} {{ end }} <link rel="shortcut
+icon" href="{{ "/images/favicon.ico" | relURL }}" type="image/x-icon" /> {{
+$style := resources.Get "style.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
-<link rel="shortcut icon" href="{{ "/images/favicon.ico" | relURL }}"
-type="image/x-icon" /> {{ if or .Params.math .Site.Params.math }} {{ partial
-"math.html" . }} {{ end }} {{ if .OutputFormats.Get "RSS" }} {{ with
-.OutputFormats.Get "RSS" }}
+{{ if or .Params.math .Site.Params.math }} {{ partial "math.html" . }} {{ end }}
+{{ if .OutputFormats.Get "RSS" }} {{ with .OutputFormats.Get "RSS" }}
 <link
   href="{{ .RelPermalink }}"
   rel="alternate"

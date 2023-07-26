@@ -8,6 +8,14 @@
   </head>
 
   <body>
+      <span id="browser" style="display: none; background-color: red; color: white; padding: 1rem">
+  Google is actively hurting the open web with its browser chromium, read more
+  <a
+    href="https://github.com/RupertBenWiser/Web-Environment-Integrity/blob/main/explainer.md"
+    >here</a
+  >. Consider switching to a better browser, such as
+  <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>
+</span>
     {{ partial "navigation.html" . }}
 
     <main class="main">
@@ -16,4 +24,9 @@
     
     {{ partial "footer.html" . }}
   </body>
+<script>
+    if (window?.chrome) {
+        document.getElementById("browser").style.display = "block";
+    }
+</script>
 </html>

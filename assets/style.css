@@ -679,10 +679,6 @@ nav.navigation a:hover {
 .item .title {
   font-family: "JetBrains Mono", monospace;
 }
-#listpage .title,
-#single {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-}
 .tags a::before {
   content: "#";
 }

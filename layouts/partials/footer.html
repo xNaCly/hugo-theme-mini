@@ -1,11 +1,12 @@
 <footer id="footer">
-	<div class="copyright">
-		{{ with .Site.Params.copyright }} {{ . | markdownify }} {{ else }} © Copyright {{ now.Format "2006"}}
-		<span class="split"> &lt;3 </span>
-		{{ .Site.Params.Author }} {{ end }}
-	</div>
+  <div class="copyright">
+    {{ with .Site.Params.copyright }} {{ . | markdownify }} {{ else }} ©
+    Copyright {{ now.Format "2006"}}
+    <span class="split"> &lt;3 </span>
+    {{ .Site.Params.Author.Name }} {{ end }}
+  </div>
 
-	{{ if ne .Site.Params.showPowerBy false }}
-	<div class="powerby">{{ i18n "poweredBy" | safeHTML }}</div>
-	{{ end }}
+  {{ if ne .Site.Params.showPowerBy false }}
+  <div class="powerby">{{ i18n "poweredBy" | safeHTML }}</div>
+  {{ end }}
 </footer>

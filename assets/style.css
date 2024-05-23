@@ -747,7 +747,6 @@ nav.navigation a:hover {
   background-color: var(--background-third);
   border-radius: var(--spacing);
   padding: var(--spacing);
-  cursor: pointer;
   transition: all linear 200ms;
 }
 
@@ -779,10 +778,6 @@ nav.navigation a:hover {
 .project-github > svg {
   stroke: var(--primary);
   width: 2rem;
-}
-
-.project:hover {
-  transform: translateY(-5px);
 }
 
 .project-github > svg:hover {

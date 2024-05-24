@@ -1,14 +1,13 @@
-{{ define "main" }}
-{{ partial "profile.html" . }}
+{{ define "main" }} {{ partial "profile.html" . }}
 
 <section id="section">
-    <h3>ABOUT ME</h3>
-    <div class="content-container">
-        {{ .Content }}
-    </div>
-    <h3>SKILLS</h3>
-    {{ partial "skillcontainer.html" . }}
-    <h3>PROJECTS</h3>
-    {{ partial "projectcontainer.html" . }}
+  <h3>ABOUT ME</h3>
+  <div class="content-container">{{ .Content }}</div>
+  <h3>PAPERS</h3>
+  {{ partial "papers.html" . }}
+  <h3>SKILLS</h3>
+  {{ partial "skillcontainer.html" . }}
+  <h3>PROJECTS</h3>
+  {{ partial "projectcontainer.html" . }}
 </section>
 {{ end }}

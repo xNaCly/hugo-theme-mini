@@ -1,5 +1,4 @@
 /* xnacly's custom vars */
-
 :root {
   --background: #f8f9fa;
   --background-sec: #f8f9fa;
@@ -39,6 +38,26 @@
     --text-third: #6a6a6a;
     --background-sec-hover: #1a1a1a;
   }
+}
+
+.paper-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.paper {
+  background-color: var(--background-third);
+  border-radius: var(--spacing);
+  padding: var(--spacing);
+  transition: all linear 200ms;
+  margin-bottom: 1rem;
+}
+
+.paper > h4 {
+  font-size: calc(var(--spacing) * 2);
+  margin-top: var(--spacing);
+  margin-bottom: var(--spacing);
+  font-weight: 800;
 }
 
 /* inter-regular - latin */

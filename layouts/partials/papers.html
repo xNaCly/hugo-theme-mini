@@ -1,0 +1,13 @@
+<div class="paper-container">
+  {{range .Site.Data.papers.papers}}
+  <div class="paper">
+    <h4>
+      <a href="{{.link}}">{{.title}}</a>
+    </h4>
+    <span>{{.description}}</span>
+    <small>
+      <a href="{{.slides}}">Slides (german)</a>
+    </small>
+  </div>
+  {{end}}
+</div>

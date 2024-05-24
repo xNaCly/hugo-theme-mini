@@ -1,7 +1,18 @@
-@import "css/light.css" screen;
-@import "css/dark.css" screen and (prefers-color-scheme: dark);
 /* xnacly's custom vars */
+
 :root {
+  --background: #f8f9fa;
+  --background-sec: #f8f9fa;
+  --background-third: #ebebeb;
+  --background-forth: #f8f9fa;
+  --primary: #00aaff;
+  --primary-between: #0099e6;
+  --primary-hover: #0089ce;
+  --text: #383838;
+  --text-secondary: #aea3b0;
+  --text-secondary-hover: #38383810;
+  --text-third: #e3d0d8;
+  --background-sec-hover: #bcabae50;
   --spacing: 0.5rem;
   --code: var(--text);
   --danger: rgb(251, 70, 76);
@@ -12,6 +23,22 @@
   --warning-darker: rgba(224, 222, 113, 0.1);
   --info-darker: rgba(2, 122, 255, 0.1);
   --tip-darker: rgb(83, 223, 221, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #161616;
+    --background-sec: #1f1f1f;
+    --background-third: #262626;
+    --primary: #8875ff;
+    --primary-between: #7867e3;
+    --primary-hover: #685ac7;
+    --text: #dcddde;
+    --text-secondary: #999;
+    --text-secondary-hover: #dcddde10;
+    --text-third: #6a6a6a;
+    --background-sec-hover: #1a1a1a;
+  }
 }
 
 /* inter-regular - latin */

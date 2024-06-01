@@ -5,9 +5,11 @@
       <a href="{{.link}}">{{.title}}</a>
     </h4>
     <span>{{.description}}</span>
+    {{ if .slides }}
     <small>
       <a href="{{.slides}}">Slides (german)</a>
     </small>
+    {{end}}
   </div>
   {{end}}
 </div>

@@ -1,5 +1,5 @@
 <div class="social-container" id="social">
-  {{ range $key, $val := .Site.Social }}
+  {{ range $key, $val := .Site.Params.Social }}
   <div>
     <a class="symbol" href="{{ $val }}" rel="me" target="_blank">
       {{ $svg := print "svgs/" $key ".svg" }} {{ partial $svg (dict "fill"

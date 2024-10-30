@@ -151,6 +151,21 @@ code {
   -webkit-text-size-adjust: 100%;
 }
 
+.codeblock-type-container {
+  position: relative;
+}
+
+.codeblock-type {
+  background-color: var(--background-third);
+  color: var(--primary);
+  border-radius: calc(var(--spacing) / 2);
+  padding: var(--spacing);
+  position: absolute;
+  bottom: -2.5rem;
+  margin-right: 1rem;
+  right: 0;
+}
+
 .social-container {
   display: flex;
 }
@@ -308,6 +323,8 @@ pre code {
 }
 pre {
   border-radius: 0.5rem;
+  border-top-left-radius: 0;
+  padding-top: 0;
 }
 
 /* navigation */

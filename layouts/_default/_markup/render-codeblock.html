@@ -1,0 +1,4 @@
+<div class="codeblock-type-container">
+  <span class="codeblock-type">{{ upper .Type }}</span>
+</div>
+{{ $result := transform.HighlightCodeBlock . }} {{ $result.Wrapped }}
